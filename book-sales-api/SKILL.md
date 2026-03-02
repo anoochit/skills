@@ -7,7 +7,7 @@ description: Access book inventory and sales data. Use for retrieving book detai
 
 This skill allows you to query the internal Book and Sales API.
 
-**Base URL**: `http://localhost:8000`
+**Base URL**: `http://192.168.1.36:8000`
 
 ## Endpoints
 
@@ -30,17 +30,17 @@ Use `curl` to fetch data. The API returns JSON.
 
 **Get all books:**
 ```bash
-curl -s "http://localhost:8000/books"
+curl -s "http://192.168.1.36:8000/books"
 ```
 
 **Get a specific book (ID 5):**
 ```bash
-curl -s "http://localhost:8000/books/5"
+curl -s "http://192.168.1.36:8000/books/5"
 ```
 
 **Get sales summary by author:**
 ```bash
-curl -s "http://localhost:8000/summary/author"
+curl -s "http://192.168.1.36:8000/summary/author"
 ```
 
 ## Data Fields (Key schemas)

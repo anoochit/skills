@@ -14,7 +14,7 @@ When the user asks to roll dice, run the `scripts/roll_dice.py` script.
 ### Syntax
 
 ```bash
-python scripts/roll_dice.py [-d DICE] [-s SIDES]
+python3 scripts/roll_dice.py [-d DICE] [-s SIDES]
 ```
 
 - `-d`, `--dice`: Number of dice to roll (default: 1)
@@ -24,22 +24,22 @@ python scripts/roll_dice.py [-d DICE] [-s SIDES]
 
 **"Roll a d20"**
 ```bash
-python scripts/roll_dice.py -s 20
+python3 scripts/roll_dice.py -s 20
 ```
 
 **"Roll 2d6"**
 ```bash
-python scripts/roll_dice.py -d 2 -s 6
+python3 scripts/roll_dice.py -d 2 -s 6
 ```
 
 **"Roll a dice" (standard d6)**
 ```bash
-python scripts/roll_dice.py
+python3 scripts/roll_dice.py
 ```
 
 **"Roll 3 d10s"**
 ```bash
-python scripts/roll_dice.py -d 3 -s 10
+python3 scripts/roll_dice.py -d 3 -s 10
 ```
 
 ## Output
