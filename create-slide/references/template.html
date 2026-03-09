@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Reveal.js Presentation</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+
+        <style>
+            :root {
+                --r-main-font: 'Google Sans', 'Product Sans', 'Inter', sans-serif;
+                --r-heading-font: 'Google Sans', 'Product Sans', 'Inter', sans-serif;
+            }
+            .reveal {
+                font-family: 'Google Sans', 'Product Sans', 'Inter', sans-serif;
+            }
+            .chart-container {
+                position: relative;
+                margin: auto;
+                height: 450px;
+                width: 85%;
+            }
+            h1, h2, h3 {
+                text-transform: none !important;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <!-- Slides will be injected here -->
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+                center: true,
+                transition: 'slide'
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+{
+    "title": "Quarterly Sales Report",
+    "slides": [
+        {
+            "type": "title",
+            "title": "Quarterly Sales Performance",
+            "subtitle": "Q1 2026 - Growth & Analysis"
+        },
+        {
+            "type": "bullets",
+            "title": "Key Highlights",
+            "bullets": [
+                "25% revenue increase YoY",
+                "New market expansion into APAC",
+                "Customer retention rate at 92%"
+            ]
+        },
+        {
+            "type": "chart",
+            "title": "Revenue Growth",
+            "chartConfig": {
+                "type": "bar",
+                "data": {
+                    "labels": ["Jan", "Feb", "Mar"],
+                    "datasets": [{
+                        "label": "Revenue ($k)",
+                        "data": [120, 190, 300],
+                        "backgroundColor": ["rgba(75, 192, 192, 0.2)"],
+                        "borderColor": ["rgba(75, 192, 192, 1)"],
+                        "borderWidth": 1
+                    }]
+                },
+                "options": {
+                    "plugins": {
+                        "legend": { "labels": { "color": "#fff" } }
+                    },
+                    "scales": {
+                        "x": { "ticks": { "color": "#fff" }, "grid": { "color": "rgba(255,255,255,0.1)" } },
+                        "y": { "ticks": { "color": "#fff" }, "grid": { "color": "rgba(255,255,255,0.1)" } }
+                    }
+                }
+            }
+        },
+        {
+            "type": "content",
+            "title": "Conclusion",
+            "content": "Overall, the first quarter has exceeded expectations. We are on track for a record-breaking year."
+        }
+    ]
+}
