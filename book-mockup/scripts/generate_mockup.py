@@ -8,29 +8,15 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-# Load environment variables from .env file if it exists
-load_dotenv()
-
 # Setup the GenAI client
-use_vertexai = os.environ.get("GOOGLE_GENAI_USE_VERTEXAI") == "1"
 api_key = os.environ.get("GOOGLE_API_KEY")
 
-if use_vertexai:
-    # Initialize for Vertex AI
-    project = os.environ.get("GOOGLE_CLOUD_PROJECT")
-    location = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
-    if not project:
-        print("Error: GOOGLE_CLOUD_PROJECT environment variable not set for Vertex AI.")
-        sys.exit(1)
-    client = genai.Client(vertexai=True, project=project, location=location)
-    print(f"Using Vertex AI (project={project}, location={location})")
-else:
-    # Initialize with API Key
-    if not api_key:
-        print("Error: GOOGLE_API_KEY environment variable not set.")
-        sys.exit(1)
-    client = genai.Client(api_key=api_key)
-    print("Using Gemini API Key.")
+# Initialize with API Key
+if not api_key:
+    print("Error: GOOGLE_API_KEY environment variable not set.")
+    sys.exit(1)
+client = genai.Client(api_key=api_key)
+print("Using Gemini API Key.")
 
 def resolve_cover_path(cover_arg: str) -> Path:
     """Resolves the cover path with project-relative priority."""
@@ -48,7 +34,7 @@ def generate_mockup(cover_path, description, output_path):
     """Generates a photo-realistic book mockup from cover image and description."""
     # gemini-2.5-flash-image supports image input + image output
     # Note: This model usually requires Vertex AI.
-    model_name = "gemini-2.5-flash-image"
+    model_name = "gemini-3.1-flash-image-preview"
 
     try:
         # Load the cover image
